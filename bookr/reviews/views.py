@@ -3,5 +3,5 @@ from django.shortcuts import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world!")
     name = request.Get.get("name") or "world"
+    return HttpResponse(f"Hello, {}!".format(name))
